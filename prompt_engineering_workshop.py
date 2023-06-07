@@ -11,7 +11,7 @@ from langchain.schema import (
 )
 
 prompt_patterns = {
-    "Persona Pattern": "Imagine you are being interviewed by an Information Systems PhD doing research on the used-car market. Please respond in an authentic manner, please criticise the interview if you think the question asked are not senseful to you.",
+    "Persona Pattern": "Imagine you are being interviewed by an Information Systems PhD doing research on the used-car market. Please respond in an authentic manner, please criticise the interviewee if you think the question asked are not senseful to you.",
     "Delimiter Pattern": "Please summarise the following text 'There is a growing interest in understanding the role of genetics in explaining heterogeneity in behaviors, including those related to information systems (IS). The majority of the recent genetics research focuses on searching the entire genome in genome-wide association studies (GWASs) to link DNA to human traits. The results of GWASs can be used on datasets to compute a measure of genetic propensity known as a polygenic score, or PGS. PGSs are widely viewed as the future of genetics research. We conducted an exploratory study, in the context of information technology (IT) use, to examine if the PGS approach can be used to better understand the role of genetics in IS research. Consistent with our hypotheses, genetic endowments associated with Educational Attainment and General Cognition positively predict technology use, and genetic endowments associated with Neuroticism, Depressive Symptoms, Myocardial Infarction, and Coronary Artery Disease negatively predict technology use more than half a century later (genetic endowments are established at conception and our sample consists of individuals aged 50 to 80). Many of the characteristics known to be associated with heterogeneity in IT use (e.g., trust, education) appear to be mediators linking PGSs to IT use. Nonetheless, a number of PGSs maintain meaningful direct effects.'",
     "Assignment 1": "",
     "Few-Shot Pattern": """You are a Text Classifier indetifying 5 Propaganda Techniques within News Paper Articles. These are the 5 propaganda techniques you classify with definitions and examples:
@@ -22,26 +22,26 @@ prompt_patterns = {
     Doubt - Questioning the credibility of someone or something, e.g. 'Is he ready to be the Mayor?
     """,
     "Chain of Thought Pattern": "We are creating a online learning platform for students. We currently don't know how to design the platform. Please propose a initial design for the platform. Reason about your design and explain why each feature is important and which tech stack we could use.",
-    "ReAct Pattern": "",
+    # "ReAct Pattern": "",
     "Assignment 2": "",
     "Condition Pattern": "We created a survey to collect feedback from our users of our prototype. We will pass the results of a survey to you. Please return only concrete improvement suggestions for our prototype and else return 'no suggestions'.",
-    "Refinement Pattern": "We are designing a interview process. We will give you information about the interview process and then we will show you questions asked by the interviewer. Please give feedback on the questions, suggest improvements and propose a better version of the pattern.",
-    "Interactive Problem Solving Pattern": "", #difference to prior pattern?
+    "Refinement Pattern": "We are designing a interview process. We will give you information about the interview process and then we will show you questions asked by the interviewer. Please give feedback on the questions, suggest improvements and propose a better version of the question.",
+    "Interactive Problem Solving Pattern": "When you are asked to plan a trip, follow these rules. Generate a number of additional questions about my budget, preferred activities, and whether or not I will have a car. Combine the answers to these questions to better plan my itinerary.", #difference to prior pattern?
     "Assignment 3": "",
     "Structured Data Pattern": "Looking at the given transcripts please extract name, age, profession and location of the interviewee. Please return the extracted information in a structured format I prefer .csv.", 
     "Assignment 4": "",
     "Recipe Pattern": "Could you outline the steps for conducting a systematic literature review?",
     "Outline Expansion Pattern": "You are an outline expander please give bullet points about the 'The Impact of Large Language Models on Information Systems'. Please give 5 bullet points. I will then ask you to expand on one of the bullet points.",
-    "Fact Check List Pattern": None, #TODO
+    "Fact Check List Pattern": "Whenever you output text, generate a set of facts that are contained in the output. The set of facts should be inserted at the end of the output. The set of facts should be the fundamental facts that could undermine the veracity of the output if any of them are incorrect.", #TODO
     "Assignment 5": "",
-    "Game Play + Meta Language + Semantic Filter Pattern": None
+    # "Game Play + Meta Language + Semantic Filter Pattern": None
 }
 
 def init():
     # Load the OpenAI API key from the environment variable
     from dotenv import load_dotenv
     load_dotenv()
-    
+
 def main():
     init()
 
