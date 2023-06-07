@@ -40,9 +40,10 @@ prompt_patterns = {
 def init():
     # Load the OpenAI API key from the environment variable
     from dotenv import load_dotenv
-
+    load_dotenv()
+    
 def main():
-    # init()
+    init()
 
     # sidebar to choose prompt patterns
     with st.sidebar:
