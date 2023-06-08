@@ -17,7 +17,7 @@ prompt_patterns = {
     "Few-Shot Pattern": """You are a Text Classifier indetifying 5 Propaganda Techniques within News Paper Articles. These are the 5 propaganda techniques you classify with definitions and examples:
     Loaded_Language - Uses specific phrases and words that carry strong emotional impact to affect the audience, e.g. 'a lone lawmaker’s childish shouting.'
     Exaggeration,Minimisation - Either representing something in an excessive manner or making something seem less important than it actually is, e.g. 'I was not fighting with her; we were just playing.'
-    Appeal_to_Authority - Supposes that a claim is true because a valid authority or expert on the issue supports it, 'The World Health Organisation stated, the new medicine is the most effective treatment for the disease.'
+    Appeal_to_Authority - Supposes that a claim is true because a valid authority or expert on the issue supports it, 'I heard that taking this herbal supplement can cure cancer. It was recommended by a famous celebrity doctor who claims to have personal experience with its effectiveness.'
     Slogans - A brief and striking phrase that contains labeling and stereotyping, e.g.  “Make America great again!”
     Doubt - Questioning the credibility of someone or something, e.g. 'Is he ready to be the Mayor?
     """,
@@ -67,7 +67,7 @@ def main():
 
     # handle user input
     if st.button("Send"):
-        print(user_input)
+        # print(user_input)
         if user_input:
             st.session_state.messages.append(HumanMessage(content=user_input))
             with st.spinner("Thinking..."):
